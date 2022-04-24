@@ -86,7 +86,8 @@ for idx, [data_type, info_file] in enumerate(zip(data_types, labeling_file_names
     for obj in obj_list:
         # Load Save json file, Save gt file
         annotation_file = json.load(open(f'./{data_type}_{obj}_annotation.json'))
-        gt_file = open(f'{save_root_path}gt_{obj}_annotation.json', 'w')
+        # gt 파일은 txt
+        gt_file = open(f'{save_root_path}gt_{obj}.txt', 'w')
         # 내부 객체 하나하나 읽음 (file 이름으로 읽음)
         for file_name in tqdm(annotation_file):
             # 객체의 파일 이름을 키로 값을 읽음 (annotation 객체)
