@@ -95,4 +95,4 @@ for idx, [data_type, info_file] in enumerate(zip(data_types, labeling_file_names
             for idx, annotation in enumerate(annotations):
                 # 어노테이션 객체의 텍스트 속성을 읽음
                 text = annotation['text']
-                gt_file.write(f'{obj}/{file_name}\t{text}')
+                gt_file.write(f'{obj}/{file_name}\t{text}\n')
