@@ -3,8 +3,11 @@ import random
 import os 
 from tqdm import tqdm
 
-data_types = ['ocr', 'htr']
-labeling_file_names = ['printed_data_info.json', 'handwriting_data_info_clean.json']
+# data_types = ['ocr', 'htr']
+# labeling_file_names = ['printed_data_info.json', 'handwriting_data_info_clean.json']
+
+data_types = ['wild']
+labeling_file_names = ['textinthewild_data_info.json']
 json_files = []
 
 for idx, [data_type, info_file] in enumerate(zip(data_types, labeling_file_names)):
