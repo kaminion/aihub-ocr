@@ -63,6 +63,8 @@ for idx, [data_type, info_file] in enumerate(zip(data_types, labeling_file_names
     for idx, annotations in enumerate(json_info['annotations']):
         if idx % 5000 == 0:
             print(idx, '/', len(json_info['annotations']), 'processed')
+        if data_type == "wild":
+            if annotations['attributes']['class'] != 'word': continue
         if annotations['image_id'] in train_ids_img:
             train_annotations[train_ids_img[annotations['image_id']]].append(annotations)
         elif annotations['image_id'] in validation_ids_img:

@@ -17,4 +17,8 @@ for data_type in data_types:
             for idx, annotation in enumerate(annotations):
                 # 어노테이션 객체의 텍스트 속성을 읽음
                 text = annotation['text']
+                if "bbox" in annotation:
+                    x, y, w, h = annotation['bbox']
+                    if x <= 0 or y <= 0 or w <= 0 or h <= 0:
+                        continue
                 gt_file.write(f'{obj}/{file_name}\t{text}\n')
