@@ -12,6 +12,6 @@ for obj in obj_list:
   with open(f'gt_{obj}.txt', 'r') as f:
     lines = f.readlines()
     for line in lines:
-      file_path = line.split('.png')[0]
-      file_name = file_path.split('/')[1] + '.png'
+      file_path = line.split('.jpg')[0]
+      file_name = file_path.split('/')[1] + '.jpg'
       res = shutil.move(save_root_path+file_name, f'./{obj}/')
