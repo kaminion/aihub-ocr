@@ -7,8 +7,6 @@ save_root_path = 'images/'
 # copy images from dataset directory to current directory
 shutil.copytree(data_root_path, save_root_path)
 
-# 
-
 # separate dataset : train, validation, test
 obj_list = ['train', 'test', 'validation']
 for obj in obj_list:
